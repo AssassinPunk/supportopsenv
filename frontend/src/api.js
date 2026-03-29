@@ -15,3 +15,13 @@ export async function stepEnv(action) {
     body: JSON.stringify(action),
   }).then((r) => r.json());
 }
+
+export async function autoStep() {
+  return fetch(`${BASE_URL}/auto-step`, {
+    method: "POST",
+  }).then((r) => r.json());
+}
+
+export async function getAnalytics() {
+  return fetch(`${BASE_URL}/analytics`).then((r) => r.json());
+}
